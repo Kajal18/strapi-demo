@@ -1,0 +1,56 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/private-uploads",
+      "handler": "private-upload.find",
+      "config": {
+        "policies": [
+          "global::isTargetUserLoggedIn"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/private-uploads/count",
+      "handler": "private-upload.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/private-uploads/:id",
+      "handler": "private-upload.findOne",
+      "config": {
+        "policies": [
+          "global::isTargetUserLoggedIn"
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/private-uploads",
+      "handler": "private-upload.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/private-uploads/:id",
+      "handler": "private-upload.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/private-uploads/:id",
+      "handler": "private-upload.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

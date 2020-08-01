@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurant",
+  "info": {
+    "name": "restaurant"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "categories": {
+      "collection": "category",
+      "via": "restaurantCategory"
+    },
+    "Hours_of_operation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "hours-of-operation.hours-of-operation",
+      "required": true
+    }
+  }
+}

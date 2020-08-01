@@ -1,0 +1,22 @@
+{
+  "collectionName": "Hours_of_operation",
+  "info": {
+    "name": "Hours_of_operation",
+    "icon": "shipping-fast"
+  },
+  "options": {},
+  "attributes": {
+    "day_interval": {
+      "type": "string",
+      "required": true
+    },
+    "opening_hours": {
+      "type": "string",
+      "required": true
+    },
+    "closing_hours": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

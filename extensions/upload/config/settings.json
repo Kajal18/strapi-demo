@@ -1,0 +1,11 @@
+{
+  "provider": "aws-s3",
+  "providerOptions": {
+    "accessKeyId": "ACCESS_KEY",
+    "secretAccessKey": "SECRET_KEY",
+    "region": "REGION",
+    "params": {
+      "Bucket": "BUCKET"
+    }
+  }
+}

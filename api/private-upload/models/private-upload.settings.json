@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "private-upload",
+  "info": {
+    "name": "private-upload"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "media": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "user": {
+      "via": "private_uploads",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
